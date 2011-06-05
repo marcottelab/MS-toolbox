@@ -40,3 +40,10 @@ def get_mgf_list():
         if( line.endswith('.mgf') ):
             rv.append( line.strip() )
     return rv
+
+def get_mzxml_list():
+    rv = []
+    for line in os.listdir('mzXML'):
+        if( line.endswith('.mzXML.gz') ):
+            rv.append( line.strip() )
+    return rv
