@@ -27,8 +27,10 @@ cparams['DB_FASTA'] = os.path.join(CWD,'DB','your_db.fa')
 cparams['DB_FASTAPRO'] = os.path.join(CWD,'DB','your_db.fa.pro')
 cparams['DB_TRIE'] = os.path.join(CWD,'DB','your_db.fa.trie')
 cparams['DB_BLASTDB'] = os.path.join(CWD,'DB','your_db.fa')
+cparams['DB_DECOY_PREFIX'] = 'xf_'
 
 cparams['PATH_TPP'] = '/usr/local/tpp'
+cparams['PATH_XINTERACT'] = '/usr/local/tpp/bin/xinteract'
 cparams['PATH_MSCONVERT'] = '/usr/local/tpp/bin/msconvert'
 
 cparams['PATH_FASTAPRO_EXE'] = '/usr/local/bin/fastapro.exe'
