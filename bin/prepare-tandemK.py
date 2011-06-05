@@ -73,6 +73,7 @@ for basename_mgf in helper.get_mgf_list():
     
     f_sh.write("%s %s\n"%(conf['PATH_TANDEMK_EXE'], filename_in))
     f_sh.write('%s %s %s\n'%(conf['PATH_TANDEM2XML'], filename_out, filename_pepxml))
+    f_sh.write('gzip %s\n'%(filename_out))
 f_sh.close()
 
 os.chmod(filename_sh,stat.S_IRWXU)
