@@ -44,6 +44,6 @@ def get_mgf_list():
 def get_mzxml_list():
     rv = []
     for line in os.listdir('mzXML'):
-        if( line.endswith('.mzXML.gz') ):
+        if( line.endswith('.mzXML') ):
             rv.append( line.strip() )
     return rv

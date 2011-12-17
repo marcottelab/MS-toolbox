@@ -1,0 +1,7 @@
+spectra,{FILENAME_MZXML}
+instrument,ESI-ION-TRAP
+protease,Trypsin
+DB,{DB_TRIE}
+TagCount,50
+PMTolerance,2.5
+mod,57,C,fix
