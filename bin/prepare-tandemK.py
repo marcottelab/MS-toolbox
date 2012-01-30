@@ -51,15 +51,15 @@ f_in_tmpl.close()
 filename_sh = os.path.join(CWD,'scripts','run-tandemK.sh')
 f_sh = open(filename_sh,'w')
 f_sh.write('#!/bin/bash\n')
-for basename_mgf in helper.get_mgf_list():
-    filename_base = basename_mgf.replace('.mgf','')
+for basename_mzxml in helper.get_mzxml_list():
+    filename_base = basename_mzxml.replace('.mzXML','')
     filename_in = os.path.join(CWD,dirname,'%s.tandemK.xml'%filename_base)
 
     in_params = dict()
     in_params['DB_NAME'] = conf['DB_NAME']
     in_params['TANDEMK_DEFAULT_PARAM'] = conf['PATH_TANDEMK_DEFAULT_PARAM']
     in_params['FILENAME_TAXON'] = filename_taxon
-    in_params['FILENAME_MGF'] = os.path.join(CWD,'mgf',basename_mgf)
+    in_params['FILENAME_MGF'] = os.path.join(CWD,'mzXML',basename_mzxml)
     filename_out = os.path.join(CWD,dirname,'%s.tandemK.out'%filename_base)
     in_params['FILENAME_OUT'] = filename_out
     in_params['FILENAME_LOG'] = os.path.join(CWD,dirname,'%s.tandemK.log'%filename_base)

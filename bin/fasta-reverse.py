@@ -21,16 +21,13 @@ for line in f_fasta:
         header = line.strip().lstrip('>').split()[0]
         seq[header] = ''
     else:
-        seq[header] += line.strip()
+        seq[header] += line.strip().upper()
 f_fasta.close()
 
 f_target = open("%s.target"%filename_fasta,'w')
 f_reverse = open("%s.reverse"%filename_fasta,'w')
-f_reverse_inspect = open("%s.reverse_inspect"%filename_fasta,'w')
 for h in seq.keys():
     f_reverse.write(">rv_%s\n%s\n"%(h,seq[h][::-1]))
-    f_reverse_inspect.write(">XXX.%s\n%s\n"%(h,seq[h][::-1]))
     f_target.write(">%s\n%s\n"%(h,seq[h]))
-f_reverse_inspect.close()
 f_reverse.close()
 f_target.close()
