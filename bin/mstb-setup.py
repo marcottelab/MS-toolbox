@@ -5,7 +5,7 @@ import time
 
 import mstb_helper as helper
 
-DIR_LIST = ['DB','RAW','mzXML','mgf','ms2','tmp','scripts']
+DIR_LIST = ['DB','RAW','mzXML','tmp','scripts']
 #ENGINE_LIST = ['sequest','inspect','tandem','tandemK','omssa','myrimatch','MSGFDB']
 
 MSTB_HOME = helper.get_mstb_home()
