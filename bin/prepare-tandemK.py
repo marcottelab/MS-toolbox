@@ -59,7 +59,7 @@ for basename_mzxml in helper.get_mzxml_list():
     in_params['DB_NAME'] = conf['DB_NAME']
     in_params['TANDEMK_DEFAULT_PARAM'] = conf['PATH_TANDEMK_DEFAULT_PARAM']
     in_params['FILENAME_TAXON'] = filename_taxon
-    in_params['FILENAME_MGF'] = os.path.join(CWD,'mzXML',basename_mzxml)
+    in_params['FILENAME_MZXML'] = os.path.join(CWD,'mzXML',basename_mzxml)
     filename_out = os.path.join(CWD,dirname,'%s.tandemK.out'%filename_base)
     in_params['FILENAME_OUT'] = filename_out
     in_params['FILENAME_LOG'] = os.path.join(CWD,dirname,'%s.tandemK.log'%filename_base)

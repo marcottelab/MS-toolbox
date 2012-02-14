@@ -3,7 +3,7 @@
 <note type="input" label="list path, default parameters">{TANDEMK_DEFAULT_PARAM}</note>
 <note type="input" label="list path, taxonomy information">{FILENAME_TAXON}</note>
 <note type="input" label="protein, taxon">{DB_NAME}</note>
-<note type="input" label="spectrum, path">{FILENAME_MGF}</note>
+<note type="input" label="spectrum, path">{FILENAME_MZXML}</note>
 <note type="input" label="output, path">{FILENAME_OUT}</note>
 <note type="input" label="output, log path">{FILENAME_LOG}</note>
 <note type="input" label="output, log path"></note>
