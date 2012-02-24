@@ -44,7 +44,7 @@ for basename_mzXML in helper.get_mzxml_list():
     in_params['PATH_MSGFDB_JAR'] = conf['PATH_MSGFDB_JAR']
     in_params['DB_FASTA'] = conf['DB_FASTA']
     in_params['FILENAME_MGF'] = os.path.join(CWD,'mzXML',basename_mzXML)
-    in_params['FILENAME_OUT'] = os.path.join(CWD,dirname,'%s.MSGFDB_out'%filename_base)
+    in_params['FILENAME_OUT'] = os.path.join(CWD,dirname,'%s.%s.MSGFDB_out'%(filename_base,conf['DB_NAME']))
     f_sh.write( cmd_tmpl.format(**in_params) )
 f_sh.close()
 
