@@ -27,30 +27,33 @@ cparams['DB_FASTA'] = os.path.join(CWD,'DB','your_db.fa')
 cparams['DB_FASTAPRO'] = os.path.join(CWD,'DB','your_db.fa.pro')
 cparams['DB_TRIE'] = os.path.join(CWD,'DB','your_db.fa.trie')
 cparams['DB_BLASTDB'] = os.path.join(CWD,'DB','your_db.fa')
-cparams['DB_DECOY_PREFIX'] = 'xf_'
+cparams['DB_DECOY_PREFIX'] = 'rv_'
 
 cparams['PATH_TPP'] = '/usr/local/tpp'
 cparams['PATH_XINTERACT'] = '/usr/local/tpp/bin/xinteract'
-cparams['PATH_MSCONVERT'] = '/usr/local/tpp/bin/msconvert'
+cparams['PATH_MSCONVERT'] = '/usr/local/bin/msconvert'
 
-cparams['PATH_FASTAPRO_EXE'] = '/usr/local/bin/fastapro.exe'
 cparams['PATH_TANDEMK_EXE'] = '/usr/local/tpp/bin/tandem.exe'
 cparams['PATH_TANDEM2XML'] = '/usr/local/tpp/bin/Tandem2XML'
 cparams['PATH_TANDEMK_DEFAULT_PARAM'] = '/usr/local/tpp/bin/isb_default_input_kscore.xml'
 
 cparams['PATH_OMSSACL'] = '/usr/local/bin/omssacl'
-
 cparams['PATH_INSPECT'] = '/usr/local/bin/inspect'
 cparams['PATH_MSGFDB_JAR'] = '/usr/local/src/MSGFDB/current.jar'
+cparams['PATH_CRUX'] = '/usr/local/bin/crux'
+cparams['PATH_TIDE'] = '/usr/local/bin/tide'
 
 for filename_db in os.listdir( os.path.join(CWD,'DB') ):
     if( filename_db.endswith('.fa') or filename_db.endswith('.fasta') ):
         cparams['DB_FASTA'] = os.path.join(CWD,'DB',filename_db)
         cparams['DB_NAME'] = filename_db.replace('.fa','').replace('.fasta','')
+        sys.stderr.write('DB name = %s\n'%cparams['DB_NAME'])
+
     if( filename_db.endswith('.pro') ):
         cparams['DB_FASTAPRO'] = os.path.join(CWD,'DB',filename_db)
-    if( filename_db.endswith('.psq') ):
-        cparams['DB_BLASTDB'] = os.path.join(CWD,'DB',filename_db.replace('.psq',''))
+
+    if( filename_db.endswith('.pin') ):
+        cparams['DB_BLASTDB'] = os.path.join(CWD,'DB',filename_db.replace('.pin',''))
     if( filename_db.endswith('.trie') ):
         cparams['DB_TRIE'] = os.path.join(CWD,'DB',filename_db)
 
